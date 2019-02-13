@@ -1,0 +1,42 @@
+﻿@model IEnumerable<WebApplication2.Models.Clock>
+
+
+
+
+
+
+
+<h1>Welcome to our Story</h1>
+<form method="post">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Price</th>
+                <th>RentPriceForHours</th>
+                <th>Amount</th>
+                <th>Buy</th>
+                <th>Rent</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <th>@item.Name</th>
+                <th>@item.Brand</th>
+                <th>@item.Price</th>
+                <th>@item.RentPriceForHours</th>
+                <th>@item.Amount</th>
+                <th><a href="/Home/Buy" class="btn btn-info">Buy </a></th>
+                <th><a href="/Home/Rent" class="btn btn-danger">Rent </a></th>
+            </tr>
+            }
+
+        </tbody>
+    </table>
+</form>
+
